@@ -1,0 +1,69 @@
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "SimpleUI"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ 
+local mainFrame = Instance.new("Frame")
+mainFrame.Size = UDim2.new(0, 300, 0, 300)
+mainFrame.Position = UDim2.new(0.5, -150, 0.5, -150)
+mainFrame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+mainFrame.BorderSizePixel = 0
+mainFrame.Active = true -- Needed for dragging
+mainFrame.Draggable = true -- Make it draggable!
+mainFrame.Parent = screenGui
+ 
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 50)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.BackgroundTransparency = 1
+title.Text = "Grow a Garden"
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 30
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.Parent = mainFrame
+ 
+local function createButton(name, yPos, callback)
+	local button = Instance.new("TextButton")
+	button.Size = UDim2.new(0.8, 0, 0, 40)
+	button.Position = UDim2.new(0.1, 0, 0, yPos)
+	button.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+	button.BorderSizePixel = 0
+	button.Text = name
+	button.Font = Enum.Font.SourceSans
+	button.TextSize = 24
+	button.TextColor3 = Color3.fromRGB(255, 255, 255)
+	button.Parent = mainFrame
+ 
+	button.MouseButton1Click:Connect(callback)
+end
+ 
+createButton("Infinite Money (NEW)", 60, function()
+	warn("Its Patched!")
+	local Players = game:GetService("Players")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	LocalPlayer:Kick("Its patched")
+end)
+ 
+createButton("Freeze Sell Dupe (FREE SEEDS)", 110, function()
+	print("Go sell an item")
+	local Players = game:GetService("Players")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	LocalPlayer:Kick("Its patched")
+end)
+ 
+createButton("Trade Dupe", 160, function()
+	print("Trade someone")
+	local Players = game:GetService("Players")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	LocalPlayer:Kick("Its patched")
+end)
+ 
+createButton("Get New Seeds (30$)", 210, function()
+	print("0000-GetFunction")
+	local Players = game:GetService("Players")
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	LocalPlayer:Kick("Not Authorized to perform this Action")
+end)
