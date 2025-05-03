@@ -32,38 +32,13 @@ local function createButton(name, yPos, callback)
 	button.TextSize = 24
 	button.TextColor3 = Color3.fromRGB(255, 255, 255)
 	button.Parent = mainFrame
- 
 	button.MouseButton1Click:Connect(callback)
-end
- 
+end 
 createButton("Infinite Money (NEW)", 60, function()
-	warn("Its Patched!")
-	local Players = game:GetService("Players")
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	LocalPlayer:Kick("Its patched")
-end)
  
 createButton("Freeze Sell Dupe (FREE SEEDS)", 110, function()
-	print("Go sell an item")
-	local Players = game:GetService("Players")
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	LocalPlayer:Kick("Its patched")
-end)
- 
+	print("Go sell an item") 
 createButton("Trade Dupe", 160, function()
-	print("Trade someone")
-	local Players = game:GetService("Players")
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	LocalPlayer:Kick("Its patched")
-end)
- 
+	print("Trade someone")= 
 createButton("Get New Seeds (30$)", 210, function()
 	print("0000-GetFunction")
-	local Players = game:GetService("Players")
-	local Players = game:GetService("Players")
-	local LocalPlayer = Players.LocalPlayer
-	LocalPlayer:Kick("Not Authorized to perform this Action")
-end)
